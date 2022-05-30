@@ -1,0 +1,13 @@
+{
+    "name": "api/ppswe",
+    "authors": [
+        {
+            "name": "Danish Irfan Shah",
+            "email": "64722277+DanishStampy@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.6",
+        "google/cloud": "^0.182.0"
+    }
+}
