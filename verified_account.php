@@ -13,7 +13,7 @@ if (isset($_GET['uid'], $_GET['email'])) {
   $email_patient = $db->getPatientEmail($patient_uid);
   print_r($email_patient.'<br>');
   
-  $db->setPatientEmail($email_caregiver, $email_patient);
+  $db->setPatientEmail($email_caregiver, $email_patient, $patient_uid);
 }
 
 ?>

@@ -48,7 +48,7 @@ function sendEmail($uid, $email)
   $mail->isHTML(true);                                  //Set email format to HTML
   $mail->Subject = 'CHANGE CAREGIVER REQUEST';
   $mail->Body    = 'Click the link below to get an access from <b>patient data:</b>
-  <br /><br /><a href="http://192.168.95.101/api_ppswe/verified_account.php?uid='.$uid.'&email='.$email.'">Verify here!</a>';
+  <br /><br /><a href="http://192.168.219.101/api_ppswe/verified_account.php?uid='.$uid.'&email='.$email.'">Verify here!</a>';
 
   $mail->send();
 }

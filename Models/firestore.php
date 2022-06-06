@@ -45,7 +45,7 @@ class Firestore{
   * 
   * update/set patient email on caregiver document 
   */
-  public function setPatientEmail(string $email_caregiver, string $email_patient){
+  public function setPatientEmail(string $email_caregiver, string $email_patient, string $patient_uid){
     
     $userRef = $this->firestore->collection('users');
     $query = $userRef->where('email', '=', $email_caregiver)->documents();
@@ -56,7 +56,8 @@ class Firestore{
       }
 
       $userRef->document($document->id())->update([
-        ['path' => 'patientEmail', 'value' => $email_patient]
+        ['path' => 'patientRef', 'value' => "/users/{$patient_uid}"],
+        ['path' => 'patientEmail', 'value' => "{$email_patient}"]
       ]);
     }
   
