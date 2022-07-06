@@ -32,7 +32,7 @@ function sendEmail($uid, $email)
   $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
   $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
   $mail->Username   = 'a175139@siswa.ukm.edu.my';                     //SMTP username
-  $mail->Password   = 'samtish1adnin';                               //SMTP password
+  $mail->Password   = 'ukmseisa175139';                               //SMTP password
   $mail->SMTPSecure = "ssl";            //Enable implicit TLS encryption
   $mail->Port       = 465;
 
@@ -48,7 +48,7 @@ function sendEmail($uid, $email)
   $mail->isHTML(true);                                  //Set email format to HTML
   $mail->Subject = 'CHANGE CAREGIVER REQUEST';
   $mail->Body    = 'Click the link below to get an access from <b>patient data:</b>
-  <br /><br /><a href="http://192.168.219.101/api_ppswe/verified_account.php?uid='.$uid.'&email='.$email.'">Verify here!</a>';
+  <br /><br /><a href="http://192.168.43.128/api_ppswe/verified_account.php?uid='.$uid.'&email='.$email.'">Verify here!</a>';
 
   $mail->send();
 }

@@ -52,7 +52,7 @@ class Firestore{
 
     foreach( $query as $document) {
       if ($document->exists()) {
-        print_r($document->id());
+        //print_r($document->id());
       }
 
       $userRef->document($document->id())->update([
@@ -61,7 +61,7 @@ class Firestore{
       ]);
     }
   
-    print_r("<br>Done update!");
+    print_r("Done verified!");
   }
   
 }
